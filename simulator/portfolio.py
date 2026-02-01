@@ -13,8 +13,9 @@ class Portfolio:
     realized_pnl: float = 0.0
 
     @classmethod
-    def initial(cls, cash: float = 100_000.0) -> "Portfolio":
-        return cls(cash=float(cash))
+    def initial(cls, cash: float = 100_000.0, team: str = "team") -> "Portfolio":
+        return cls(team=team, cash=float(cash))
+
 
     def position_value(self, prices: Dict[str, float]) -> float:
         return sum(self.positions.get(sym, 0) * prices.get(sym, 0.0) for sym in self.positions)
