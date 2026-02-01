@@ -4,14 +4,6 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict
 
-@classmethod
-def initial(cls, cash: float = 100_000.0) -> "Portfolio":
-    """
-    Convenience constructor used by tests and CLI.
-    Creates an empty portfolio with the given starting cash.
-    """
-    return cls(cash=float(cash))
-
 @dataclass
 class Portfolio:
     team: str
@@ -19,6 +11,10 @@ class Portfolio:
     positions: Dict[str, int] = field(default_factory=dict)  # shares
     avg_cost: Dict[str, float] = field(default_factory=dict) # average cost per share
     realized_pnl: float = 0.0
+
+    @classmethod
+    def initial(cls, cash: float = 100_000.0) -> "Portfolio":
+        return cls(cash=float(cash))
 
     def position_value(self, prices: Dict[str, float]) -> float:
         return sum(self.positions.get(sym, 0) * prices.get(sym, 0.0) for sym in self.positions)
