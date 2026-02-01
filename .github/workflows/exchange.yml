@@ -1,0 +1,149 @@
+name: Exchange Clock (Hourly)
+
+on:
+  schedule:
+    # Run at minute 07 every hour (avoid top-of-hour runner congestion)
+    - cron: "7 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write        # push updates to exchange-data branch
+  issues: write          # close processed order issues
+  pages: write           # deploy to GitHub Pages
+  id-token: write        # required by deploy-pages
+
+concurrency:
+  group: "exchange-clock"
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main (code)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout exchange-data (persistent state)
+        uses: actions/checkout@v4
+        with:
+          ref: exchange-data
+          path: exchange_state
+          fetch-depth: 0
+
+      - name: Sync persistent state into workspace
+        shell: bash
+        run: |
+          set -e
+          mkdir -p data/market data/state data/reports data/leaderboards site/data
+
+          # Copy persisted state if it exists
+          if [ -d "exchange_state/data" ]; then
+            rsync -a exchange_state/data/ data/ || true
+          fi
+          if [ -d "exchange_state/site" ]; then
+            rsync -a exchange_state/site/ site/ || true
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install numpy pandas pyyaml
+          fi
+
+      - name: Fetch open order issues (label=order)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -e
+          # Get all open issues with label=order, paginate if needed
+          gh api --paginate -H "Accept: application/vnd.github+json" \
+            "/repos/${{ github.repository }}/issues?state=open&labels=order&per_page=100" \
+            > issues_raw.json
+
+          # Filter out pull requests (they have .pull_request field)
+          python - << 'PY'
+import json
+raw = json.load(open("issues_raw.json", "r", encoding="utf-8"))
+issues = [x for x in raw if "pull_request" not in x]
+json.dump({"issues": issues}, open("tmp_issues.json", "w", encoding="utf-8"), indent=2)
+print(f"Fetched {len(issues)} order issues")
+PY
+
+      - name: Run exchange tick (generate bar + execute orders + write snapshots)
+        shell: bash
+        run: |
+          python -m simulator.run_github_exchange_tick --orders_json tmp_issues.json
+
+      - name: Close processed order issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -e
+          python - << 'PY'
+import json, subprocess, os
+obj = json.load(open("tmp_issues.json","r",encoding="utf-8"))
+issues = obj.get("issues", [])
+nums = [str(x["number"]) for x in issues if "number" in x]
+print("Closing issues:", nums)
+
+repo = os.environ.get("GITHUB_REPOSITORY", "${{ github.repository }}")
+for n in nums:
+    subprocess.check_call([
+        "gh","api","-X","PATCH",
+        f"/repos/{repo}/issues/{n}",
+        "-f","state=closed",
+        "-f","state_reason=completed"
+    ])
+PY
+
+      - name: Sync updated state back to exchange-data working tree
+        shell: bash
+        run: |
+          set -e
+          mkdir -p exchange_state/data exchange_state/site
+          rsync -a data/ exchange_state/data/
+          rsync -a site/ exchange_state/site/
+
+      - name: Commit & push state to exchange-data
+        shell: bash
+        run: |
+          set -e
+          cd exchange_state
+
+          git config user.name "exchange-bot"
+          git config user.email "exchange-bot@users.noreply.github.com"
+
+          # IMPORTANT: force-add data/site even if ignored in .gitignore
+          git add -A -f data site
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "Exchange tick: update state and snapshots"
+            git push
+          fi
+
+      - name: Upload Pages artifact (from persisted site/)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: exchange_state/site
+
+  deploy:
+    needs: tick
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
