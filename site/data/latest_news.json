@@ -1,4 +1,17 @@
 {
-  "timestamp": null,
-  "items": []
+  "timestamp": "2026-02-02 16:00:00",
+  "items": [
+    {
+      "timestamp": "2026-02-02 16:00:00",
+      "date": "2026-02-02",
+      "ticker": "VZ",
+      "company_name": "Verizon Communications Inc.",
+      "event_type": "meme_spike",
+      "sentiment": "positive",
+      "headline": "VZ spikes as social chatter surges",
+      "shock_return": 0.01806318620061135,
+      "macro_context": null,
+      "regime": "sideways"
+    }
+  ]
 }
