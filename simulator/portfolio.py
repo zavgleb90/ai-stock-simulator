@@ -23,6 +23,9 @@ class Portfolio:
     def nav(self, prices: Dict[str, float]) -> float:
         return self.cash + self.position_value(prices)
 
+    def value(self, prices): 
+        return self.nav(prices)
+
     def buy(self, sym: str, qty: int, price: float, fee: float = 0.0) -> None:
         if qty <= 0:
             return
