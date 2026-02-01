@@ -1,701 +1,701 @@
 {
-  "timestamp": "2026-02-02 10:00:00",
+  "timestamp": "2026-02-02 11:00:00",
   "rows": [
     {
       "ticker": "AAL",
       "sector": "Industrials",
-      "close": 129.4601,
-      "volume": 3382997,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 128.1805,
+      "volume": 4127859,
+      "chg": -1.2796000000000163,
+      "chg_pct": -0.009884126460585278
     },
     {
       "ticker": "AAPL",
       "sector": "Tech",
-      "close": 77.9803,
-      "volume": 3755693,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 77.5433,
+      "volume": 3640240,
+      "chg": -0.4369999999999976,
+      "chg_pct": -0.005603979466608844
     },
     {
       "ticker": "ABBV",
       "sector": "Healthcare",
-      "close": 51.8854,
-      "volume": 3248796,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 51.6079,
+      "volume": 3684394,
+      "chg": -0.2774999999999963,
+      "chg_pct": -0.005348325347785626
     },
     {
       "ticker": "ADBE",
       "sector": "Tech",
-      "close": 57.9076,
-      "volume": 3862096,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 57.2508,
+      "volume": 4102905,
+      "chg": -0.656800000000004,
+      "chg_pct": -0.011342207240500453
     },
     {
       "ticker": "AMD",
       "sector": "Tech",
-      "close": 319.6366,
-      "volume": 1198080,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 317.952,
+      "volume": 1398377,
+      "chg": -1.684599999999989,
+      "chg_pct": -0.005270360152748431
     },
     {
       "ticker": "AMZN",
       "sector": "Consumer",
-      "close": 144.5529,
-      "volume": 3164785,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 143.4962,
+      "volume": 3400575,
+      "chg": -1.0567000000000064,
+      "chg_pct": -0.007310126604170559
     },
     {
       "ticker": "ATVI",
       "sector": "Tech",
-      "close": 161.8226,
-      "volume": 4413481,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 161.7407,
+      "volume": 3935650,
+      "chg": -0.08189999999999031,
+      "chg_pct": -0.000506109777002658
     },
     {
       "ticker": "BA",
       "sector": "Industrials",
-      "close": 120.7113,
-      "volume": 1883739,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 119.5891,
+      "volume": 1802525,
+      "chg": -1.1221999999999923,
+      "chg_pct": -0.00929656129956344
     },
     {
       "ticker": "BABA",
       "sector": "Consumer",
-      "close": 109.4239,
-      "volume": 1626805,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 109.8477,
+      "volume": 1564729,
+      "chg": 0.42379999999999995,
+      "chg_pct": 0.003873011289124222
     },
     {
       "ticker": "BAC",
       "sector": "Financials",
-      "close": 96.6137,
-      "volume": 3333361,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 96.4495,
+      "volume": 3297878,
+      "chg": -0.1641999999999939,
+      "chg_pct": -0.0016995519269005733
     },
     {
       "ticker": "BIDU",
       "sector": "Comm",
-      "close": 100.0454,
-      "volume": 3231211,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 99.8559,
+      "volume": 3072270,
+      "chg": -0.18949999999999534,
+      "chg_pct": -0.001894140060412526
     },
     {
       "ticker": "BILI",
       "sector": "Tech",
-      "close": 84.0728,
-      "volume": 1983902,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 83.8048,
+      "volume": 2331608,
+      "chg": -0.2680000000000007,
+      "chg_pct": -0.0031877135054381523
     },
     {
       "ticker": "C",
       "sector": "Financials",
-      "close": 57.1605,
-      "volume": 1026578,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 56.8799,
+      "volume": 1176756,
+      "chg": -0.28059999999999974,
+      "chg_pct": -0.0049089843510815995
     },
     {
       "ticker": "CARR",
       "sector": "Industrials",
-      "close": 198.775,
-      "volume": 1782080,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 198.3856,
+      "volume": 1611082,
+      "chg": -0.38939999999999486,
+      "chg_pct": -0.001958998868066884
     },
     {
       "ticker": "CCL",
       "sector": "Consumer",
-      "close": 128.8171,
-      "volume": 1133557,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 128.0844,
+      "volume": 1106967,
+      "chg": -0.7327000000000226,
+      "chg_pct": -0.005687909446804986
     },
     {
       "ticker": "COIN",
       "sector": "Financials",
-      "close": 144.6836,
-      "volume": 585309,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 143.755,
+      "volume": 525508,
+      "chg": -0.9286000000000172,
+      "chg_pct": -0.006418142761170009
     },
     {
       "ticker": "COST",
       "sector": "Consumer",
-      "close": 178.8705,
-      "volume": 997282,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 177.7037,
+      "volume": 942813,
+      "chg": -1.166799999999995,
+      "chg_pct": -0.006523155019972522
     },
     {
       "ticker": "CPRX",
       "sector": "Healthcare",
-      "close": 112.4588,
-      "volume": 2715062,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 111.6636,
+      "volume": 3311332,
+      "chg": -0.7951999999999941,
+      "chg_pct": -0.007071034014234494
     },
     {
       "ticker": "CSCO",
       "sector": "Tech",
-      "close": 95.0744,
-      "volume": 2873863,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 95.2355,
+      "volume": 3388351,
+      "chg": 0.16110000000000468,
+      "chg_pct": 0.001694462442045437
     },
     {
       "ticker": "CVX",
       "sector": "Energy",
-      "close": 129.8438,
-      "volume": 3611181,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 130.5195,
+      "volume": 3852005,
+      "chg": 0.6757000000000062,
+      "chg_pct": 0.005203945047819043
     },
     {
       "ticker": "DAL",
       "sector": "Industrials",
-      "close": 98.0977,
-      "volume": 3081085,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 98.3813,
+      "volume": 3303711,
+      "chg": 0.28359999999999275,
+      "chg_pct": 0.002890995405600669
     },
     {
       "ticker": "DIS",
       "sector": "Comm",
-      "close": 45.5661,
-      "volume": 2350417,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 45.3502,
+      "volume": 1970522,
+      "chg": -0.21589999999999776,
+      "chg_pct": -0.004738171579310008
     },
     {
       "ticker": "DOCU",
       "sector": "Tech",
-      "close": 42.7767,
-      "volume": 3768918,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 42.7895,
+      "volume": 4106692,
+      "chg": 0.01279999999999859,
+      "chg_pct": 0.0002992283182199326
     },
     {
       "ticker": "ET",
       "sector": "Energy",
-      "close": 122.3401,
-      "volume": 4428540,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 120.6634,
+      "volume": 3638076,
+      "chg": -1.676700000000011,
+      "chg_pct": -0.013705236467846691
     },
     {
       "ticker": "ETSY",
       "sector": "Consumer",
-      "close": 112.5371,
-      "volume": 3893940,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 114.4466,
+      "volume": 3769262,
+      "chg": 1.9095000000000084,
+      "chg_pct": 0.016967737750484137
     },
     {
       "ticker": "F",
       "sector": "Consumer",
-      "close": 69.0412,
-      "volume": 3623326,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 68.1304,
+      "volume": 3444014,
+      "chg": -0.9108000000000089,
+      "chg_pct": -0.01319212296425915
     },
     {
       "ticker": "FDX",
       "sector": "Industrials",
-      "close": 79.5321,
-      "volume": 3816490,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 79.0986,
+      "volume": 4136855,
+      "chg": -0.4334999999999951,
+      "chg_pct": -0.0054506293685190645
     },
     {
       "ticker": "FUBO",
       "sector": "Comm",
-      "close": 102.104,
-      "volume": 1735347,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 101.9657,
+      "volume": 1620834,
+      "chg": -0.13830000000000098,
+      "chg_pct": -0.001354501292799508
     },
     {
       "ticker": "GE",
       "sector": "Industrials",
-      "close": 332.5708,
-      "volume": 768569,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 333.0498,
+      "volume": 592768,
+      "chg": 0.478999999999985,
+      "chg_pct": 0.0014402948184265875
     },
     {
       "ticker": "GM",
       "sector": "Consumer",
-      "close": 65.7254,
-      "volume": 1497490,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 65.8353,
+      "volume": 1314508,
+      "chg": 0.10990000000001032,
+      "chg_pct": 0.0016721084999103898
     },
     {
       "ticker": "GOOGL",
       "sector": "Tech",
-      "close": 59.2941,
-      "volume": 4208530,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 58.113,
+      "volume": 4715784,
+      "chg": -1.1811000000000007,
+      "chg_pct": -0.019919351166473573
     },
     {
       "ticker": "GS",
       "sector": "Financials",
-      "close": 105.7511,
-      "volume": 1225881,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 105.1884,
+      "volume": 1068449,
+      "chg": -0.5626999999999924,
+      "chg_pct": -0.005320984840819551
     },
     {
       "ticker": "HCA",
       "sector": "Healthcare",
-      "close": 197.1429,
-      "volume": 3348521,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 198.0358,
+      "volume": 3497752,
+      "chg": 0.8928999999999974,
+      "chg_pct": 0.0045292019139415995
     },
     {
       "ticker": "HOOD",
       "sector": "Financials",
-      "close": 252.2312,
-      "volume": 1921705,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 251.7923,
+      "volume": 1532406,
+      "chg": -0.43889999999998963,
+      "chg_pct": -0.0017400702212889984
     },
     {
       "ticker": "INTC",
       "sector": "Tech",
-      "close": 71.8915,
-      "volume": 320113,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 71.6656,
+      "volume": 423572,
+      "chg": -0.22589999999999577,
+      "chg_pct": -0.003142235173838295
     },
     {
       "ticker": "JNJ",
       "sector": "Healthcare",
-      "close": 61.6111,
-      "volume": 548111,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 61.0638,
+      "volume": 551866,
+      "chg": -0.5472999999999999,
+      "chg_pct": -0.00888313956413698
     },
     {
       "ticker": "JPM",
       "sector": "Financials",
-      "close": 88.1032,
-      "volume": 4020209,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 87.7988,
+      "volume": 4111405,
+      "chg": -0.3044000000000011,
+      "chg_pct": -0.003455039090521129
     },
     {
       "ticker": "KO",
       "sector": "Consumer",
-      "close": 149.7457,
-      "volume": 2109368,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 149.3307,
+      "volume": 2146703,
+      "chg": -0.41499999999999204,
+      "chg_pct": -0.002771365054221871
     },
     {
       "ticker": "LCID",
       "sector": "Consumer",
-      "close": 82.8614,
-      "volume": 2312757,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 82.3561,
+      "volume": 2257322,
+      "chg": -0.5053000000000054,
+      "chg_pct": -0.006098134957893608
     },
     {
       "ticker": "LMT",
       "sector": "Industrials",
-      "close": 185.866,
-      "volume": 1357223,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 184.4993,
+      "volume": 1299355,
+      "chg": -1.3667000000000087,
+      "chg_pct": -0.007353146890770816
     },
     {
       "ticker": "META",
       "sector": "Tech",
-      "close": 105.4398,
-      "volume": 3722361,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 105.2053,
+      "volume": 3105614,
+      "chg": -0.23450000000001125,
+      "chg_pct": -0.0022240178756030575
     },
     {
       "ticker": "MGM",
       "sector": "Consumer",
-      "close": 123.3669,
-      "volume": 1634603,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 123.0169,
+      "volume": 1805054,
+      "chg": -0.3499999999999943,
+      "chg_pct": -0.0028370656959037983
     },
     {
       "ticker": "MRNA",
       "sector": "Healthcare",
-      "close": 246.4839,
-      "volume": 1215722,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 247.6018,
+      "volume": 1229137,
+      "chg": 1.1178999999999917,
+      "chg_pct": 0.004535387504011384
     },
     {
       "ticker": "MRO",
       "sector": "Energy",
-      "close": 102.6174,
-      "volume": 1041331,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 102.5138,
+      "volume": 1034765,
+      "chg": -0.10360000000000014,
+      "chg_pct": -0.0010095753741568207
     },
     {
       "ticker": "MSFT",
       "sector": "Tech",
-      "close": 115.5932,
-      "volume": 718916,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 116.2689,
+      "volume": 590420,
+      "chg": 0.6757000000000062,
+      "chg_pct": 0.005845499562258041
     },
     {
       "ticker": "NFLX",
       "sector": "Comm",
-      "close": 174.1429,
-      "volume": 1610771,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 174.4133,
+      "volume": 1428422,
+      "chg": 0.2703999999999951,
+      "chg_pct": 0.0015527477720882969
     },
     {
       "ticker": "NIO",
       "sector": "Consumer",
-      "close": 71.2455,
-      "volume": 2641843,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 70.293,
+      "volume": 3548992,
+      "chg": -0.9525000000000006,
+      "chg_pct": -0.013369265427290151
     },
     {
       "ticker": "NKE",
       "sector": "Consumer",
-      "close": 92.3749,
-      "volume": 4112248,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 91.9412,
+      "volume": 4011364,
+      "chg": -0.43370000000000175,
+      "chg_pct": -0.00469499831664231
     },
     {
       "ticker": "NOK",
       "sector": "Tech",
-      "close": 37.8159,
-      "volume": 2200053,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 37.2547,
+      "volume": 1895159,
+      "chg": -0.5611999999999995,
+      "chg_pct": -0.014840318490370439
     },
     {
       "ticker": "NVDA",
       "sector": "Tech",
-      "close": 91.4338,
-      "volume": 3453949,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 90.6702,
+      "volume": 3266257,
+      "chg": -0.7636000000000109,
+      "chg_pct": -0.008351397404461051
     },
     {
       "ticker": "PEP",
       "sector": "Consumer",
-      "close": 117.0152,
-      "volume": 2496998,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 116.2917,
+      "volume": 3145650,
+      "chg": -0.7234999999999872,
+      "chg_pct": -0.006182957427752866
     },
     {
       "ticker": "PFE",
       "sector": "Healthcare",
-      "close": 68.0233,
-      "volume": 3944554,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 67.3647,
+      "volume": 3997865,
+      "chg": -0.658600000000007,
+      "chg_pct": -0.009681976616835803
     },
     {
       "ticker": "PINS",
       "sector": "Comm",
-      "close": 75.8954,
-      "volume": 3238673,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 75.5818,
+      "volume": 3945072,
+      "chg": -0.3135999999999939,
+      "chg_pct": -0.004132002730073152
     },
     {
       "ticker": "PLTR",
       "sector": "Tech",
-      "close": 55.3243,
-      "volume": 2208225,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 54.9777,
+      "volume": 2263583,
+      "chg": -0.34660000000000224,
+      "chg_pct": -0.006264878181920101
     },
     {
       "ticker": "PYPL",
       "sector": "Financials",
-      "close": 116.2059,
-      "volume": 3699261,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 115.867,
+      "volume": 3417167,
+      "chg": -0.3388999999999953,
+      "chg_pct": -0.0029163751582320287
     },
     {
       "ticker": "RBLX",
       "sector": "Tech",
-      "close": 127.9316,
-      "volume": 2916807,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 126.1099,
+      "volume": 3643183,
+      "chg": -1.821700000000007,
+      "chg_pct": -0.014239640557923195
     },
     {
       "ticker": "RIOT",
       "sector": "Financials",
-      "close": 151.2564,
-      "volume": 2252970,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 151.0107,
+      "volume": 2057187,
+      "chg": -0.24569999999999936,
+      "chg_pct": -0.0016243940752259033
     },
     {
       "ticker": "RIVN",
       "sector": "Consumer",
-      "close": 305.7946,
-      "volume": 3928867,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 303.5088,
+      "volume": 3564388,
+      "chg": -2.2857999999999947,
+      "chg_pct": -0.007474952141077687
     },
     {
       "ticker": "RKT",
       "sector": "Financials",
-      "close": 88.0731,
-      "volume": 1531116,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 87.5779,
+      "volume": 1912294,
+      "chg": -0.495199999999997,
+      "chg_pct": -0.005622602133909184
     },
     {
       "ticker": "ROKU",
       "sector": "Comm",
-      "close": 50.6815,
-      "volume": 4833574,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 51.1297,
+      "volume": 4767634,
+      "chg": 0.44819999999999993,
+      "chg_pct": 0.008843463591251243
     },
     {
       "ticker": "SBUX",
       "sector": "Consumer",
-      "close": 66.7766,
-      "volume": 3345332,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 66.8287,
+      "volume": 2905789,
+      "chg": 0.052099999999995816,
+      "chg_pct": 0.0007802134280570711
     },
     {
       "ticker": "SHOP",
       "sector": "Tech",
-      "close": 221.5451,
-      "volume": 3965001,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 221.0257,
+      "volume": 4210597,
+      "chg": -0.5193999999999903,
+      "chg_pct": -0.0023444436369840288
     },
     {
       "ticker": "SIRI",
       "sector": "Comm",
-      "close": 144.9819,
-      "volume": 956073,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 143.6427,
+      "volume": 899062,
+      "chg": -1.3392000000000053,
+      "chg_pct": -0.009237015103264651
     },
     {
       "ticker": "SNAP",
       "sector": "Comm",
-      "close": 147.3942,
-      "volume": 636455,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 148.7483,
+      "volume": 593290,
+      "chg": 1.3540999999999883,
+      "chg_pct": 0.009186928657979678
     },
     {
       "ticker": "SOFI",
       "sector": "Financials",
-      "close": 199.1247,
-      "volume": 1832987,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 198.3334,
+      "volume": 1488887,
+      "chg": -0.7912999999999784,
+      "chg_pct": -0.003973891737187694
     },
     {
       "ticker": "SONY",
       "sector": "Tech",
-      "close": 108.3703,
-      "volume": 842583,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 107.7473,
+      "volume": 766992,
+      "chg": -0.6230000000000047,
+      "chg_pct": -0.005748807560743162
     },
     {
       "ticker": "SPY",
       "sector": "Financials",
-      "close": 78.1596,
-      "volume": 3995904,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 78.2563,
+      "volume": 3508625,
+      "chg": 0.09669999999999845,
+      "chg_pct": 0.001237212063521288
     },
     {
       "ticker": "SPYG",
       "sector": "Financials",
-      "close": 136.1532,
-      "volume": 3483116,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 136.9473,
+      "volume": 3602441,
+      "chg": 0.7941000000000145,
+      "chg_pct": 0.0058324005605451396
     },
     {
       "ticker": "SQ",
       "sector": "Tech",
-      "close": 59.9122,
-      "volume": 3267407,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 60.2539,
+      "volume": 3421082,
+      "chg": 0.341700000000003,
+      "chg_pct": 0.005703345896161433
     },
     {
       "ticker": "T",
       "sector": "Comm",
-      "close": 95.8532,
-      "volume": 2656666,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 94.9569,
+      "volume": 3301172,
+      "chg": -0.8962999999999965,
+      "chg_pct": -0.009350757199550945
     },
     {
       "ticker": "TGT",
       "sector": "Consumer",
-      "close": 251.7112,
-      "volume": 1079048,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 249.685,
+      "volume": 919260,
+      "chg": -2.0261999999999887,
+      "chg_pct": -0.008049701403831013
     },
     {
       "ticker": "TLRY",
       "sector": "Healthcare",
-      "close": 156.9515,
-      "volume": 2740706,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 157.1751,
+      "volume": 2613406,
+      "chg": 0.22359999999997626,
+      "chg_pct": 0.0014246439186626203
     },
     {
       "ticker": "TSLA",
       "sector": "Consumer",
-      "close": 265.3694,
-      "volume": 852079,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 263.7678,
+      "volume": 739656,
+      "chg": -1.6015999999999622,
+      "chg_pct": -0.006035360520089966
     },
     {
       "ticker": "TSM",
       "sector": "Tech",
-      "close": 93.1048,
-      "volume": 2226821,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 94.8371,
+      "volume": 3144935,
+      "chg": 1.7323000000000093,
+      "chg_pct": 0.018605915054863007
     },
     {
       "ticker": "TWTR",
       "sector": "Comm",
-      "close": 199.1614,
-      "volume": 1064211,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 198.398,
+      "volume": 1067587,
+      "chg": -0.7633999999999901,
+      "chg_pct": -0.003833072071194469
     },
     {
       "ticker": "UAL",
       "sector": "Industrials",
-      "close": 122.3718,
-      "volume": 3305458,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 121.9651,
+      "volume": 3127189,
+      "chg": -0.4066999999999865,
+      "chg_pct": -0.0033234781215932636
     },
     {
       "ticker": "UBER",
       "sector": "Tech",
-      "close": 98.6324,
-      "volume": 2496587,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 98.4085,
+      "volume": 2595837,
+      "chg": -0.22390000000000043,
+      "chg_pct": -0.0022700451372976876
     },
     {
       "ticker": "UNH",
       "sector": "Healthcare",
-      "close": 57.9055,
-      "volume": 3999279,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 57.8084,
+      "volume": 3837436,
+      "chg": -0.09710000000000463,
+      "chg_pct": -0.0016768700727910928
     },
     {
       "ticker": "V",
       "sector": "Financials",
-      "close": 96.4654,
-      "volume": 1697589,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 96.1041,
+      "volume": 1354357,
+      "chg": -0.36129999999999995,
+      "chg_pct": -0.0037453843554269193
     },
     {
       "ticker": "VIAC",
       "sector": "Comm",
-      "close": 175.0247,
-      "volume": 3162206,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 175.0325,
+      "volume": 2823731,
+      "chg": 0.007800000000003138,
+      "chg_pct": 4.4565138520466755e-05
     },
     {
       "ticker": "VWO",
       "sector": "Financials",
-      "close": 43.6511,
-      "volume": 795847,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 43.8072,
+      "volume": 777105,
+      "chg": 0.15610000000000213,
+      "chg_pct": 0.0035760839933014774
     },
     {
       "ticker": "VZ",
       "sector": "Comm",
-      "close": 97.0474,
-      "volume": 3468528,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 96.4238,
+      "volume": 3833054,
+      "chg": -0.6235999999999962,
+      "chg_pct": -0.006425725985446247
     },
     {
       "ticker": "WBA",
       "sector": "Healthcare",
-      "close": 377.4907,
-      "volume": 1874784,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 379.9392,
+      "volume": 2254485,
+      "chg": 2.448500000000024,
+      "chg_pct": 0.006486252509002272
     },
     {
       "ticker": "WFC",
       "sector": "Financials",
-      "close": 98.6659,
-      "volume": 4192662,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 97.9784,
+      "volume": 3677365,
+      "chg": -0.6875,
+      "chg_pct": -0.006967959548334329
     },
     {
       "ticker": "WMT",
       "sector": "Consumer",
-      "close": 140.2649,
-      "volume": 2058715,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 141.4137,
+      "volume": 1937504,
+      "chg": 1.1487999999999943,
+      "chg_pct": 0.008190217224694091
     },
     {
       "ticker": "XOM",
       "sector": "Energy",
-      "close": 64.2683,
-      "volume": 3123262,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 65.3034,
+      "volume": 3307020,
+      "chg": 1.0351,
+      "chg_pct": 0.016105918469914406
     },
     {
       "ticker": "ZM",
       "sector": "Tech",
-      "close": 89.3872,
-      "volume": 596438,
-      "chg": 0.0,
-      "chg_pct": 0.0
+      "close": 88.7229,
+      "volume": 652840,
+      "chg": -0.6643000000000114,
+      "chg_pct": -0.007431712817942741
     }
   ]
 }
