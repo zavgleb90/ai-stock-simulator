@@ -4,6 +4,14 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Dict
 
+@classmethod
+def initial(cls, cash: float = 100_000.0) -> "Portfolio":
+    """
+    Convenience constructor used by tests and CLI.
+    Creates an empty portfolio with the given starting cash.
+    """
+    return cls(cash=float(cash))
+
 @dataclass
 class Portfolio:
     team: str
