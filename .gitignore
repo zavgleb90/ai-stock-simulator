@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.venv/
+env/
+ENV/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# dotenv
+.env
+
+# Data (keep placeholders; commit small samples only)
+data/outputs/
+data/raw/
+data/tmp/
+
+# n8n exports may include credentials—never commit secrets
+**/credentials*.json
+
+# Generated outputs (do not commit)
+data/leaderboards/
+data/reports/
+data/state/
+data/market/
+site/data/
+tmp_issues.json
+issues_raw.json
+

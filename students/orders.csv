@@ -1,0 +1,5 @@
+date,team,ticker,side,qty
+2025-01-06,team1,AAPL,BUY,10
+2025-01-06,team1,TSLA,BUY,5
+2025-01-06,team2,MSFT,BUY,8
+2025-01-06,team2,NVDA,BUY,4

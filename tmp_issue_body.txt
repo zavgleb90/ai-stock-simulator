@@ -1,0 +1,20 @@
+### Team name
+team1
+
+### Side
+BUY
+
+### Ticker
+AAPL
+
+### Quantity (shares)
+10
+
+### Order type
+LIMIT
+
+### Limit price (only if LIMIT)
+150.25
+
+### Notes (optional)
+Testing a limit order.
