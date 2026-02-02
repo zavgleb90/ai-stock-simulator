@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-05 16:00:00",
+  "timestamp": "2026-02-06 11:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -34,6 +34,18 @@
       "sentiment": "negative",
       "headline": "PYPL drops as margins compress and outlook weakens",
       "shock_return": -0.011868468945477592,
+      "macro_context": null,
+      "regime": "bear"
+    },
+    {
+      "timestamp": "2026-02-06 11:00:00",
+      "date": "2026-02-06",
+      "ticker": "FUBO",
+      "company_name": "fuboTV Inc.",
+      "event_type": "upgrade",
+      "sentiment": "positive",
+      "headline": "Analyst upgrades FUBO; shares climb on valuation call",
+      "shock_return": 0.00848707854167234,
       "macro_context": null,
       "regime": "bear"
     }
