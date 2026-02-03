@@ -3,7 +3,7 @@ name: Exchange Clock (Hourly)
 on:
   schedule:
     # minute 07 every hour
-    - cron: "7 * * * *"
+    - cron: "7 * * * 1-5"
   workflow_dispatch: {}
 
 permissions:

@@ -1,6 +1,11 @@
 # simulator/run_github_exchange_tick.py
 from __future__ import annotations
 
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+from .live_tape import BAR_HOURS  # uses your 10..16 schedule
+
 import argparse
 import json
 import os
@@ -36,6 +41,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--market_state", default="data/state/market_state.json")
     p.add_argument("--security_master", default="data/reference/ticker_info.csv")
 
+    p.add_argument("--tz", default="America/Chicago", help="Timezone used for market hours gating.")
+    p.add_argument("--force", action="store_true", help="Run tick even if exchange is closed.")
+
     # dashboard output
     p.add_argument("--site_data_dir", default="site/data")
     return p
@@ -48,8 +56,19 @@ def _load_issues(path: str) -> List[Dict[str, Any]]:
     return obj.get("issues", obj)
 
 
+def is_exchange_open(tz: str = "America/Chicago") -> bool:
+    now = datetime.now(ZoneInfo(tz))
+    # 0=Mon ... 6=Sun
+    if now.weekday() >= 5:
+        return False
+    return now.hour in BAR_HOURS
+
 def main() -> None:
     args = build_parser().parse_args()
+    if (not args.force) and (not is_exchange_open(args.tz)):
+        print(f"⏸ Exchange closed in {args.tz}; skipping tick.")
+        return
+
 
     os.makedirs(args.state_dir, exist_ok=True)
     os.makedirs(args.reports_dir, exist_ok=True)
