@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-06 11:00:00",
+  "timestamp": "2026-02-09 10:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -48,6 +48,18 @@
       "shock_return": 0.00848707854167234,
       "macro_context": null,
       "regime": "bear"
+    },
+    {
+      "timestamp": "2026-02-09 10:00:00",
+      "date": "2026-02-09",
+      "ticker": "JPM",
+      "company_name": "JPMorgan Chase & Co.",
+      "event_type": "meme_spike",
+      "sentiment": "positive",
+      "headline": "JPM spikes as social chatter surges",
+      "shock_return": 0.027860285001676303,
+      "macro_context": "Rates repriced",
+      "regime": "bull"
     }
   ]
 }
