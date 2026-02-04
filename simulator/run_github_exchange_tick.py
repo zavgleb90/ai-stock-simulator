@@ -220,7 +220,14 @@ def main() -> None:
     latest_news_json = os.path.join(args.site_data_dir, "latest_news.json")
     leaderboard_json = os.path.join(args.site_data_dir, "leaderboard.json")
 
-    build_latest_prices_snapshot(args.prices_out, latest_prices_json)
+    build_latest_prices_snapshot(
+        args.prices_out,
+        latest_prices_json,
+        max_rows=87,
+        lookback=60,
+        ticker_info_csv=args.security_master,
+    )
+
     build_latest_news_snapshot(args.news_out, latest_news_json)
 
     # leaderboard json
