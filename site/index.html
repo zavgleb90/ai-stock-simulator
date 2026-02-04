@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Stock Simulator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">◎</div>
+      <div>
+        <div class="title">AI Stock Simulator</div>
+        <div class="subtitle" id="subtitle">Loading market…</div>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="btn" id="refreshBtn" title="Reload snapshots">Refresh</button>
+      <button class="btn primary" id="tradeBtn" title="Open order ticket">Trade</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Left: Watchlist -->
+    <section class="panel watchlist">
+      <div class="panel-header">
+        <h2>Watchlist</h2>
+        <div class="small muted" id="watchlistMeta">—</div>
+      </div>
+
+      <div class="watchlist-controls">
+        <input id="searchInput" placeholder="Search ticker/company…" />
+        <select id="sectorFilter">
+          <option value="">All sectors</option>
+        </select>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table" id="watchlistTable">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th class="right">Last</th>
+              <th class="right">Chg</th>
+              <th class="right">%Chg</th>
+              <th class="right">Vol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td colspan="5" class="muted">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Center: Ticker detail -->
+    <section class="panel detail">
+      <div class="panel-header">
+        <div>
+          <h2 id="detailTitle">Select a ticker</h2>
+          <div class="small muted" id="detailMeta">—</div>
+        </div>
+        <div class="chip-row">
+          <span class="chip" id="chipSector">—</span>
+          <span class="chip" id="chipRegime">—</span>
+        </div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="stats">
+          <div class="stat">
+            <div class="label">Last</div>
+            <div class="value" id="statLast">—</div>
+          </div>
+          <div class="stat">
+            <div class="label">Change</div>
+            <div class="value" id="statChg">—</div>
+          </div>
+          <div class="stat">
+            <div class="label">% Change</div>
+            <div class="value" id="statPct">—</div>
+          </div>
+          <div class="stat">
+            <div class="label">Volume</div>
+            <div class="value" id="statVol">—</div>
+          </div>
+        </div>
+
+        <div class="chart">
+          <div class="chart-header">
+            <div class="small muted">Recent closes (from available history)</div>
+          </div>
+          <svg id="spark" viewBox="0 0 600 220" preserveAspectRatio="none" aria-label="Price chart"></svg>
+          <div class="small muted" id="chartHint">If your snapshots don’t include history yet, the chart will be flat.</div>
+        </div>
+      </div>
+
+      <div class="split">
+        <section class="subpanel">
+          <h3>News</h3>
+          <div id="newsList" class="list">
+            <div class="muted">Loading…</div>
+          </div>
+        </section>
+
+        <section class="subpanel">
+          <h3>Leaderboard</h3>
+          <div class="table-wrap">
+            <table class="table" id="leaderTable">
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th class="right">NAV</th>
+                  <th class="right">Cash</th>
+                  <th class="right">Realized PnL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td colspan="4" class="muted">Loading…</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Trade modal -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+  <div class="modal" id="tradeModal" hidden>
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Place Order</div>
+        <div class="small muted">Creates a GitHub Issue labeled <code>order</code>.</div>
+      </div>
+      <button class="icon-btn" id="closeModalBtn" aria-label="Close">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="form-grid">
+        <label>
+          <div class="label">Team</div>
+          <input id="fTeam" placeholder="team1" />
+        </label>
+
+        <label>
+          <div class="label">Side</div>
+          <select id="fSide">
+            <option>BUY</option>
+            <option>SELL</option>
+          </select>
+        </label>
+
+        <label>
+          <div class="label">Ticker</div>
+          <input id="fTicker" placeholder="AAPL" />
+        </label>
+
+        <label>
+          <div class="label">Qty</div>
+          <input id="fQty" type="number" min="1" step="1" value="10" />
+        </label>
+
+        <label>
+          <div class="label">Order Type</div>
+          <select id="fType">
+            <option value="MARKET">MARKET</option>
+            <option value="LIMIT">LIMIT</option>
+          </select>
+        </label>
+
+        <label>
+          <div class="label">Limit Price (if LIMIT)</div>
+          <input id="fLimit" type="number" min="0" step="0.01" placeholder="150.25" />
+        </label>
+
+        <label class="span2">
+          <div class="label">Notes</div>
+          <input id="fNotes" placeholder="Optional" />
+        </label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn" id="copyBodyBtn">Copy Issue Body</button>
+        <button class="btn primary" id="openIssueBtn">Open GitHub Issue</button>
+      </div>
+
+      <div class="small muted">
+        Tip: For fairness, your simulator can execute orders at the next bar close (or next close for LIMIT fills).
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
