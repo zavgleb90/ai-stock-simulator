@@ -2,8 +2,8 @@ name: Exchange Clock (Hourly)
 
 on:
   schedule:
-    # minute 07 every hour
-    - cron: "7 * * * 1-5"
+    # minute 07 during UTC window that overlaps US market hours; Python guard enforces America/Chicago hours
+    - cron: "7 15-22 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
