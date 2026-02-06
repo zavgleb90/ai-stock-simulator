@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-11 10:00:00",
+  "timestamp": "2026-02-11 14:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -70,6 +70,18 @@
       "sentiment": "positive",
       "headline": "MSFT gains as investors react to product announcement",
       "shock_return": 0.011767955439332947,
+      "macro_context": "Rates repriced",
+      "regime": "bull"
+    },
+    {
+      "timestamp": "2026-02-11 14:00:00",
+      "date": "2026-02-11",
+      "ticker": "PINS",
+      "company_name": "Pinterest, Inc.",
+      "event_type": "product_launch",
+      "sentiment": "positive",
+      "headline": "PINS jumps on new product launch buzz",
+      "shock_return": 0.00779348992244098,
       "macro_context": "Rates repriced",
       "regime": "bull"
     }
