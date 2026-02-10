@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-12 12:00:00",
+  "timestamp": "2026-02-13 13:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -96,6 +96,18 @@
       "shock_return": 0.014248062401691157,
       "macro_context": null,
       "regime": "bull"
+    },
+    {
+      "timestamp": "2026-02-13 13:00:00",
+      "date": "2026-02-13",
+      "ticker": "DIS",
+      "company_name": "The Walt Disney Company",
+      "event_type": "macro_headwind",
+      "sentiment": "negative",
+      "headline": "DIS slips as investors turn cautious on growth",
+      "shock_return": -0.003978480317455008,
+      "macro_context": null,
+      "regime": "sideways"
     }
   ]
 }
