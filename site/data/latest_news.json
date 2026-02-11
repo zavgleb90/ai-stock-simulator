@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-13 13:00:00",
+  "timestamp": "2026-02-16 14:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -106,6 +106,18 @@
       "sentiment": "negative",
       "headline": "DIS slips as investors turn cautious on growth",
       "shock_return": -0.003978480317455008,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-02-16 14:00:00",
+      "date": "2026-02-16",
+      "ticker": "ROKU",
+      "company_name": "Roku, Inc.",
+      "event_type": "macro_headwind",
+      "sentiment": "negative",
+      "headline": "Macro worries weigh on stocks; ROKU under pressure",
+      "shock_return": -0.004171409741289401,
       "macro_context": null,
       "regime": "sideways"
     }
