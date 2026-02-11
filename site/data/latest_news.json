@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-16 14:00:00",
+  "timestamp": "2026-02-16 15:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -118,6 +118,18 @@
       "sentiment": "negative",
       "headline": "Macro worries weigh on stocks; ROKU under pressure",
       "shock_return": -0.004171409741289401,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-02-16 15:00:00",
+      "date": "2026-02-16",
+      "ticker": "CSCO",
+      "company_name": "Cisco Systems, Inc.",
+      "event_type": "meme_spike",
+      "sentiment": "positive",
+      "headline": "CSCO spikes as social chatter surges",
+      "shock_return": 0.014945971486903062,
       "macro_context": null,
       "regime": "sideways"
     }
