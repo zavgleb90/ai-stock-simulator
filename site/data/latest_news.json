@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-16 15:00:00",
+  "timestamp": "2026-02-16 16:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -130,6 +130,18 @@
       "sentiment": "positive",
       "headline": "CSCO spikes as social chatter surges",
       "shock_return": 0.014945971486903062,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-02-16 16:00:00",
+      "date": "2026-02-16",
+      "ticker": "BILI",
+      "company_name": "Bilibili Inc.",
+      "event_type": "regulatory_risk",
+      "sentiment": "negative",
+      "headline": "BILI weakens amid new regulatory scrutiny",
+      "shock_return": -0.005991920851539349,
       "macro_context": null,
       "regime": "sideways"
     }
