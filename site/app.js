@@ -62,8 +62,26 @@ function normalizePriceRow(r) {
   const volume = Number(r.volume ?? r.vol ?? r.Volume);
   const ts = r.timestamp ?? r.time ?? r.bar_time ?? r.date ?? "";
 
-  const chg = isFinite(last) && isFinite(prev) ? (last - prev) : (isFinite(r.change) ? Number(r.change) : null);
-  const pctChg = (chg !== null && isFinite(prev) && prev !== 0) ? (chg / prev) * 100 : (isFinite(r.pct_change) ? Number(r.pct_change) : null);
+  const last = Number(r.close ?? r.last ?? r.price ?? r.Close ?? r.Last);
+  const prev = Number(r.prev_close ?? r.previous_close ?? r.prev ?? r.PrevClose);
+
+  // Accept either snapshot naming: chg/chg_pct OR change/pct_change OR compute from prev_close
+  const chgFromSnapshot =
+    (r.chg !== undefined && r.chg !== null) ? Number(r.chg) :
+    (r.change !== undefined && r.change !== null) ? Number(r.change) :
+    null;
+
+  const pctFromSnapshot =
+    (r.chg_pct !== undefined && r.chg_pct !== null) ? Number(r.chg_pct) :
+    (r.pct_change !== undefined && r.pct_change !== null) ? Number(r.pct_change) :
+    null;
+
+  const chg = (isFinite(last) && isFinite(prev)) ? (last - prev) :
+              (isFinite(chgFromSnapshot)) ? chgFromSnapshot : null;
+
+  const pctChg =
+    (chg !== null && isFinite(prev) && prev !== 0) ? (chg / prev) * 100 :
+    (isFinite(pctFromSnapshot)) ? (pctFromSnapshot * 100) : null; // if snapshot stores fraction
 
   // history series (optional) — if provided by snapshot later
   const series = Array.isArray(r.series) ? r.series : (Array.isArray(r.history) ? r.history : null);
