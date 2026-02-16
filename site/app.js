@@ -62,9 +62,6 @@ function normalizePriceRow(r) {
   const volume = Number(r.volume ?? r.vol ?? r.Volume);
   const ts = r.timestamp ?? r.time ?? r.bar_time ?? r.date ?? "";
 
-  const last = Number(r.close ?? r.last ?? r.price ?? r.Close ?? r.Last);
-  const prev = Number(r.prev_close ?? r.previous_close ?? r.prev ?? r.PrevClose);
-
   // Accept either snapshot naming: chg/chg_pct OR change/pct_change OR compute from prev_close
   const chgFromSnapshot =
     (r.chg !== undefined && r.chg !== null) ? Number(r.chg) :
