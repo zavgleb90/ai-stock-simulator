@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-16 16:00:00",
+  "timestamp": "2026-02-19 11:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -144,6 +144,18 @@
       "shock_return": -0.005991920851539349,
       "macro_context": null,
       "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-02-19 11:00:00",
+      "date": "2026-02-19",
+      "ticker": "UBER",
+      "company_name": "Uber Technologies, Inc.",
+      "event_type": "earnings_miss",
+      "sentiment": "negative",
+      "headline": "UBER drops as margins compress and outlook weakens",
+      "shock_return": -0.017764311883663814,
+      "macro_context": "Jobs surprise",
+      "regime": "bull"
     }
   ]
 }
