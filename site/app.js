@@ -86,6 +86,13 @@ function normalizePriceRow(r) {
   // history series (optional) — if provided by snapshot later
   const series = Array.isArray(r.series) ? r.series : (Array.isArray(r.history) ? r.history : null);
 
+  const seriesTs =
+    (Array.isArray(r.series_ts) ? r.series_ts :
+     Array.isArray(r.seriesTs) ? r.seriesTs :
+     Array.isArray(r.history_ts) ? r.history_ts :
+     Array.isArray(r.historyTs) ? r.historyTs :
+     null);
+
   return {
     ticker,
     company,
@@ -99,6 +106,7 @@ function normalizePriceRow(r) {
     regime: r.regime ?? "",
     macro_headline: r.macro_headline ?? "",
     series,
+    series_ts: seriesTs,
     raw: r,
   };
 }
@@ -275,79 +283,236 @@ function drawSpark(priceRow) {
   const svg = el("spark");
   svg.innerHTML = "";
 
-  // Determine series:
-  // 1) if snapshot includes series/history array -> use it
-  // 2) else fallback to flat line at last price
+  // 1) Determine series + timestamps (best-effort)
   let series = null;
   if (Array.isArray(priceRow.series) && priceRow.series.length) {
     series = priceRow.series.map(Number).filter(x => isFinite(x));
   }
   if (!series || series.length < 2) {
     const v = priceRow.last ?? 100;
-    series = Array.from({length: 24}, () => Number(v));
+    series = Array.from({ length: 24 }, () => Number(v));
+  }
+
+  let ts = null;
+  if (Array.isArray(priceRow.series_ts) && priceRow.series_ts.length) {
+    ts = priceRow.series_ts.map(String);
+    // If timestamps mismatch length, ignore
+    if (ts.length !== series.length) ts = null;
   }
 
   const w = 600, h = 220, pad = 14;
   const min = Math.min(...series), max = Math.max(...series);
   const span = (max - min) || 1;
 
+  const n = series.length;
   const pts = series.map((v, i) => {
-    const x = pad + (i * (w - 2*pad) / (series.length - 1));
-    const y = pad + ((max - v) * (h - 2*pad) / span);
-    return [x,y];
+    const x = pad + (i * (w - 2 * pad) / (n - 1));
+    const y = pad + ((max - v) * (h - 2 * pad) / span);
+    return [x, y];
   });
 
-  // Area
-  const areaPath = [
-    `M ${pts[0][0]} ${h-pad}`,
-    `L ${pts[0][0]} ${pts[0][1]}`,
-    ...pts.slice(1).map(p => `L ${p[0]} ${p[1]}`),
-    `L ${pts[pts.length-1][0]} ${h-pad}`,
-    "Z"
-  ].join(" ");
+  // Helpers
+  const NS = "http://www.w3.org/2000/svg";
+  const make = (tag) => document.createElementNS(NS, tag);
 
-  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  path.setAttribute("d", pts.map((p,i)=> (i===0?`M ${p[0]} ${p[1]}`:`L ${p[0]} ${p[1]}`)).join(" "));
-  path.setAttribute("fill", "none");
-  path.setAttribute("stroke", "rgba(93,214,255,.95)");
-  path.setAttribute("stroke-width", "2.5");
-
-  const area = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  area.setAttribute("d", areaPath);
-  area.setAttribute("fill", "rgba(93,214,255,.12)");
-  area.setAttribute("stroke", "none");
-
-  svg.appendChild(area);
-  svg.appendChild(path);
-
-    function addLabel(x, y, text, anchor="start") {
-    const t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  function addText(x, y, text, anchor = "start", opacity = 0.75, size = 12) {
+    const t = make("text");
     t.setAttribute("x", String(x));
     t.setAttribute("y", String(y));
-    t.setAttribute("fill", "rgba(231,236,255,.85)");
-    t.setAttribute("font-size", "12");
+    t.setAttribute("fill", `rgba(231,236,255,${opacity})`);
+    t.setAttribute("font-size", String(size));
     t.setAttribute("font-family", "ui-sans-serif, system-ui, Segoe UI, Roboto, Arial");
     t.setAttribute("text-anchor", anchor);
     t.textContent = text;
     svg.appendChild(t);
+    return t;
   }
 
-  // Min/Max labels
-  addLabel(pad, pad + 12, `max ${max.toFixed(2)}`, "start");
-  addLabel(pad, h - pad - 4, `min ${min.toFixed(2)}`, "start");
+  function fmtTime(s) {
+    // Try to show readable time: "YYYY-MM-DD HH:MM"
+    // Works for "2026-02-09 14:00:00" or ISO.
+    if (!s) return "";
+    const ss = String(s);
+    if (ss.length >= 16) return ss.slice(0, 16);
+    return ss;
+  }
 
-  // Last value label (top-right)
-  const lastVal = series[series.length - 1];
-  addLabel(w - pad, pad + 12, `last ${lastVal.toFixed(2)}`, "end");
+  // 2) Plot line + area
+  const areaPath = [
+    `M ${pts[0][0]} ${h - pad}`,
+    `L ${pts[0][0]} ${pts[0][1]}`,
+    ...pts.slice(1).map(p => `L ${p[0]} ${p[1]}`),
+    `L ${pts[n - 1][0]} ${h - pad}`,
+    "Z"
+  ].join(" ");
 
-  // Last dot
-  const last = pts[pts.length-1];
-  const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-  dot.setAttribute("cx", last[0]);
-  dot.setAttribute("cy", last[1]);
-  dot.setAttribute("r", "4");
-  dot.setAttribute("fill", "rgba(93,214,255,.95)");
-  svg.appendChild(dot);
+  const area = make("path");
+  area.setAttribute("d", areaPath);
+  area.setAttribute("fill", "rgba(93,214,255,.12)");
+  area.setAttribute("stroke", "none");
+  svg.appendChild(area);
+
+  const path = make("path");
+  path.setAttribute("d", pts.map((p, i) => (i === 0 ? `M ${p[0]} ${p[1]}` : `L ${p[0]} ${p[1]}`)).join(" "));
+  path.setAttribute("fill", "none");
+  path.setAttribute("stroke", "rgba(93,214,255,.95)");
+  path.setAttribute("stroke-width", "2.5");
+  svg.appendChild(path);
+
+  // Last dot (static)
+  const lastPt = pts[n - 1];
+  const lastDot = make("circle");
+  lastDot.setAttribute("cx", lastPt[0]);
+  lastDot.setAttribute("cy", lastPt[1]);
+  lastDot.setAttribute("r", "4");
+  lastDot.setAttribute("fill", "rgba(93,214,255,.95)");
+  svg.appendChild(lastDot);
+
+  // 3) Value labels (min/max/last)
+  addText(pad, pad + 12, `max ${max.toFixed(2)}`, "start", 0.7, 12);
+  addText(pad, h - pad - 4, `min ${min.toFixed(2)}`, "start", 0.7, 12);
+  addText(w - pad, pad + 12, `last ${series[n - 1].toFixed(2)}`, "end", 0.7, 12);
+
+  // 4) Time labels (start / mid / end)
+  const yAxis = h - 6;
+  if (ts && ts.length === n) {
+    const i0 = 0;
+    const im = Math.floor((n - 1) / 2);
+    const i1 = n - 1;
+
+    addText(pad, yAxis, fmtTime(ts[i0]), "start", 0.55, 11);
+    addText(w / 2, yAxis, fmtTime(ts[im]), "middle", 0.55, 11);
+    addText(w - pad, yAxis, fmtTime(ts[i1]), "end", 0.55, 11);
+  } else {
+    addText(pad, yAxis, "start", "start", 0.55, 11);
+    addText(w - pad, yAxis, "end", "end", 0.55, 11);
+  }
+
+  // 5) Hover crosshair + tooltip (SVG overlay)
+  const cross = make("line");
+  cross.setAttribute("x1", "0");
+  cross.setAttribute("y1", String(pad));
+  cross.setAttribute("x2", "0");
+  cross.setAttribute("y2", String(h - pad));
+  cross.setAttribute("stroke", "rgba(231,236,255,.35)");
+  cross.setAttribute("stroke-width", "1");
+  cross.setAttribute("visibility", "hidden");
+  svg.appendChild(cross);
+
+  const hoverDot = make("circle");
+  hoverDot.setAttribute("cx", "0");
+  hoverDot.setAttribute("cy", "0");
+  hoverDot.setAttribute("r", "4");
+  hoverDot.setAttribute("fill", "rgba(231,236,255,.95)");
+  hoverDot.setAttribute("visibility", "hidden");
+  svg.appendChild(hoverDot);
+
+  const tipG = make("g");
+  tipG.setAttribute("visibility", "hidden");
+
+  const tipBg = make("rect");
+  tipBg.setAttribute("rx", "8");
+  tipBg.setAttribute("ry", "8");
+  tipBg.setAttribute("fill", "rgba(0,0,0,.65)");
+  tipBg.setAttribute("stroke", "rgba(255,255,255,.12)");
+  tipBg.setAttribute("stroke-width", "1");
+  tipG.appendChild(tipBg);
+
+  const tipT1 = make("text");
+  tipT1.setAttribute("fill", "rgba(231,236,255,.95)");
+  tipT1.setAttribute("font-size", "12");
+  tipT1.setAttribute("font-family", "ui-sans-serif, system-ui, Segoe UI, Roboto, Arial");
+  tipT1.textContent = "";
+  tipG.appendChild(tipT1);
+
+  const tipT2 = make("text");
+  tipT2.setAttribute("fill", "rgba(231,236,255,.80)");
+  tipT2.setAttribute("font-size", "12");
+  tipT2.setAttribute("font-family", "ui-sans-serif, system-ui, Segoe UI, Roboto, Arial");
+  tipT2.textContent = "";
+  tipG.appendChild(tipT2);
+
+  svg.appendChild(tipG);
+
+  function showAtIndex(i) {
+    i = Math.max(0, Math.min(n - 1, i));
+    const [x, y] = pts[i];
+    const v = series[i];
+    const t = ts ? fmtTime(ts[i]) : `bar ${i + 1}/${n}`;
+
+    cross.setAttribute("x1", String(x));
+    cross.setAttribute("x2", String(x));
+    cross.setAttribute("visibility", "visible");
+
+    hoverDot.setAttribute("cx", String(x));
+    hoverDot.setAttribute("cy", String(y));
+    hoverDot.setAttribute("visibility", "visible");
+
+    tipT1.textContent = `${v.toFixed(2)}`;
+    tipT2.textContent = `${t}`;
+
+    // Position tooltip near the point, with bounds checks
+    const padding = 8;
+    const boxW = 160;
+    const boxH = 48;
+
+    let tx = x + 10;
+    let ty = y - boxH - 10;
+
+    if (tx + boxW > w - pad) tx = x - boxW - 10;
+    if (ty < pad) ty = y + 10;
+
+    tipBg.setAttribute("x", String(tx));
+    tipBg.setAttribute("y", String(ty));
+    tipBg.setAttribute("width", String(boxW));
+    tipBg.setAttribute("height", String(boxH));
+
+    tipT1.setAttribute("x", String(tx + padding));
+    tipT1.setAttribute("y", String(ty + 18));
+
+    tipT2.setAttribute("x", String(tx + padding));
+    tipT2.setAttribute("y", String(ty + 36));
+
+    tipG.setAttribute("visibility", "visible");
+  }
+
+  function hideHover() {
+    cross.setAttribute("visibility", "hidden");
+    hoverDot.setAttribute("visibility", "hidden");
+    tipG.setAttribute("visibility", "hidden");
+  }
+
+  function clientToSvgX(evt) {
+    const rect = svg.getBoundingClientRect();
+    const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+    const x = ((clientX - rect.left) / rect.width) * w;
+    return x;
+  }
+
+  svg.addEventListener("mousemove", (evt) => {
+    const x = clientToSvgX(evt);
+    const i = Math.round(((x - pad) / (w - 2 * pad)) * (n - 1));
+    showAtIndex(i);
+  });
+
+  svg.addEventListener("mouseleave", hideHover);
+
+  // Touch support
+  svg.addEventListener("touchstart", (evt) => {
+    evt.preventDefault();
+    const x = clientToSvgX(evt);
+    const i = Math.round(((x - pad) / (w - 2 * pad)) * (n - 1));
+    showAtIndex(i);
+  }, { passive: false });
+
+  svg.addEventListener("touchmove", (evt) => {
+    evt.preventDefault();
+    const x = clientToSvgX(evt);
+    const i = Math.round(((x - pad) / (w - 2 * pad)) * (n - 1));
+    showAtIndex(i);
+  }, { passive: false });
+
+  svg.addEventListener("touchend", hideHover);
 }
 
 function prefillTradeForm(ticker) {
