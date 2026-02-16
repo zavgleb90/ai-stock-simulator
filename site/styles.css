@@ -62,7 +62,7 @@ body{
 
 .layout{
   display:grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: minmax(460px, 34%) 1fr;
   gap:14px;
   padding:14px;
   max-width: 1400px;
