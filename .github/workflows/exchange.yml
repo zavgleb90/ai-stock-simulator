@@ -38,11 +38,15 @@ jobs:
         run: |
           set -e
           mkdir -p data/market data/state data/reports data/leaderboards site/data
+
+          # Restore persistent simulator state
           if [ -d "exchange_state/data" ]; then
             rsync -a exchange_state/data/ data/ || true
           fi
-          if [ -d "exchange_state/site" ]; then
-            rsync -a exchange_state/site/ site/ || true
+
+          # Restore ONLY dashboard snapshots (do NOT overwrite site source code from main)
+          if [ -d "exchange_state/site/data" ]; then
+            rsync -a exchange_state/site/data/ site/data/ || true
           fi
 
       - name: Set up Python
@@ -120,9 +124,13 @@ jobs:
         shell: bash
         run: |
           set -e
-          mkdir -p exchange_state/data exchange_state/site
+          mkdir -p exchange_state/data exchange_state/site/data
+
+          # Persist simulator state
           rsync -a data/ exchange_state/data/
-          rsync -a site/ exchange_state/site/
+
+          # Persist ONLY dashboard snapshots
+          rsync -a site/data/ exchange_state/site/data/
 
       - name: Commit & push state to exchange-data
         shell: bash
@@ -132,8 +140,8 @@ jobs:
           git config user.name "exchange-bot"
           git config user.email "exchange-bot@users.noreply.github.com"
 
-          # Force add state/site even if ignored on main
-          git add -A -f data site
+          # Force add state + snapshots
+          git add -A -f data site/data
           if git diff --cached --quiet; then
             echo "No state changes to commit."
           else
@@ -144,7 +152,8 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: exchange_state/site
+          # Deploy dashboard code from main (site/*) + latest snapshots (site/data/*)
+          path: site
 
   deploy:
     needs: tick
