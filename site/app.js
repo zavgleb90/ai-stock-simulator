@@ -320,6 +320,26 @@ function drawSpark(priceRow) {
   svg.appendChild(area);
   svg.appendChild(path);
 
+    function addLabel(x, y, text, anchor="start") {
+    const t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    t.setAttribute("x", String(x));
+    t.setAttribute("y", String(y));
+    t.setAttribute("fill", "rgba(231,236,255,.85)");
+    t.setAttribute("font-size", "12");
+    t.setAttribute("font-family", "ui-sans-serif, system-ui, Segoe UI, Roboto, Arial");
+    t.setAttribute("text-anchor", anchor);
+    t.textContent = text;
+    svg.appendChild(t);
+  }
+
+  // Min/Max labels
+  addLabel(pad, pad + 12, `max ${max.toFixed(2)}`, "start");
+  addLabel(pad, h - pad - 4, `min ${min.toFixed(2)}`, "start");
+
+  // Last value label (top-right)
+  const lastVal = series[series.length - 1];
+  addLabel(w - pad, pad + 12, `last ${lastVal.toFixed(2)}`, "end");
+
   // Last dot
   const last = pts[pts.length-1];
   const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
