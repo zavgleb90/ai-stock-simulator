@@ -62,10 +62,10 @@ body{
 
 .layout{
   display:grid;
-  grid-template-columns: minmax(460px, 34%) 1fr;
+  grid-template-columns: clamp(520px, 36vw, 700px) 1fr;
   gap:14px;
   padding:14px;
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
