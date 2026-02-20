@@ -103,6 +103,7 @@ body{
   background: rgba(0,0,0,.12);
   color:var(--text);
 }
+
 /* Make sector dropdown readable (options + selected value) */
 .watchlist-controls select{
   width:100%;
@@ -118,6 +119,7 @@ body{
   color: #000;
   background: #fff;
 }
+
 .table-wrap{overflow:auto; max-height: calc(100vh - 190px);}
 .table{
   width:100%;
