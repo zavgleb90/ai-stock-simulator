@@ -11,6 +11,13 @@
   --shadow: rgba(0,0,0,.35);
 }
 
+.watchlist-controls select,
+.form-grid select {
+  color-scheme: light;
+  background-color: #fff;
+  color: #000;
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
