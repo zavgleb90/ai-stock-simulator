@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-02 10:00:00",
+  "timestamp": "2026-03-02 12:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -250,6 +250,18 @@
       "sentiment": "positive",
       "headline": "WFC rockets amid retail-driven momentum",
       "shock_return": 0.015946530156756924,
+      "macro_context": null,
+      "regime": "bull"
+    },
+    {
+      "timestamp": "2026-03-02 12:00:00",
+      "date": "2026-03-02",
+      "ticker": "SIRI",
+      "company_name": "Sirius XM Holdings Inc.",
+      "event_type": "earnings_miss",
+      "sentiment": "negative",
+      "headline": "SIRI drops as margins compress and outlook weakens",
+      "shock_return": -0.026381163974045472,
       "macro_context": null,
       "regime": "bull"
     }
