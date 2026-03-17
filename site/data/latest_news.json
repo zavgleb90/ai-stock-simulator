@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-16 15:00:00",
+  "timestamp": "2026-03-19 15:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -384,6 +384,18 @@
       "shock_return": -0.009691447184580251,
       "macro_context": null,
       "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-03-19 15:00:00",
+      "date": "2026-03-19",
+      "ticker": "SNAP",
+      "company_name": "Snap Inc.",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "SNAP falls after downgrade and target cut",
+      "shock_return": -0.011363078885698832,
+      "macro_context": null,
+      "regime": "bear"
     }
   ]
 }
