@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-30 10:00:00",
+  "timestamp": "2026-03-30 12:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -430,6 +430,18 @@
       "sentiment": "negative",
       "headline": "RIVN pressured after lawsuit headlines emerge",
       "shock_return": -0.009903917391241059,
+      "macro_context": null,
+      "regime": "bear"
+    },
+    {
+      "timestamp": "2026-03-30 12:00:00",
+      "date": "2026-03-30",
+      "ticker": "NFLX",
+      "company_name": "Netflix, Inc.",
+      "event_type": "product_launch",
+      "sentiment": "positive",
+      "headline": "NFLX gains as investors react to product announcement",
+      "shock_return": 0.01016940365927839,
       "macro_context": null,
       "regime": "bear"
     }
