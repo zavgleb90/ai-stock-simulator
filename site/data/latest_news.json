@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03 14:00:00",
+  "timestamp": "2026-04-03 15:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -490,6 +490,30 @@
       "sentiment": "positive",
       "headline": "XOM rallies as quarterly results top expectations",
       "shock_return": 0.02626067695331097,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-04-03 15:00:00",
+      "date": "2026-04-03",
+      "ticker": "COIN",
+      "company_name": "Coinbase Global, Inc.",
+      "event_type": "regulatory_risk",
+      "sentiment": "negative",
+      "headline": "COIN hit by regulatory concerns and policy uncertainty",
+      "shock_return": -0.019607569663441498,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-04-03 15:00:00",
+      "date": "2026-04-03",
+      "ticker": "ZM",
+      "company_name": "Zoom Communications, Inc.",
+      "event_type": "product_launch",
+      "sentiment": "positive",
+      "headline": "ZM jumps on new product launch buzz",
+      "shock_return": 0.009391164859767456,
       "macro_context": null,
       "regime": "sideways"
     }
