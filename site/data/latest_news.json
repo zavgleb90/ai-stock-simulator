@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02 16:00:00",
+  "timestamp": "2026-04-03 14:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -478,6 +478,18 @@
       "sentiment": "negative",
       "headline": "FDX pressured after lawsuit headlines emerge",
       "shock_return": -0.014513557019465188,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-04-03 14:00:00",
+      "date": "2026-04-03",
+      "ticker": "XOM",
+      "company_name": "Exxon Mobil Corporation",
+      "event_type": "earnings_beat",
+      "sentiment": "positive",
+      "headline": "XOM rallies as quarterly results top expectations",
+      "shock_return": 0.02626067695331097,
       "macro_context": null,
       "regime": "sideways"
     }
