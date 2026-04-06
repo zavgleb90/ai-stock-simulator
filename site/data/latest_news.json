@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03 15:00:00",
+  "timestamp": "2026-04-06 14:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -514,6 +514,30 @@
       "sentiment": "positive",
       "headline": "ZM jumps on new product launch buzz",
       "shock_return": 0.009391164859767456,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-04-06 14:00:00",
+      "date": "2026-04-06",
+      "ticker": "ROKU",
+      "company_name": "Roku, Inc.",
+      "event_type": "regulatory_risk",
+      "sentiment": "negative",
+      "headline": "ROKU weakens amid new regulatory scrutiny",
+      "shock_return": -0.018759217924063525,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-04-06 14:00:00",
+      "date": "2026-04-06",
+      "ticker": "BILI",
+      "company_name": "Bilibili Inc.",
+      "event_type": "meme_crash",
+      "sentiment": "negative",
+      "headline": "BILI tumbles as meme momentum reverses",
+      "shock_return": -0.024846247164192085,
       "macro_context": null,
       "regime": "sideways"
     }
