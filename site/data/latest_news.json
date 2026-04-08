@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-07 12:00:00",
+  "timestamp": "2026-04-07 14:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -550,6 +550,18 @@
       "sentiment": "positive",
       "headline": "Risk-on session lifts TLRY alongside broader market",
       "shock_return": 0.0042127897785636925,
+      "macro_context": null,
+      "regime": "bull"
+    },
+    {
+      "timestamp": "2026-04-07 14:00:00",
+      "date": "2026-04-07",
+      "ticker": "AMD",
+      "company_name": "Advanced Micro Devices, Inc.",
+      "event_type": "regulatory_risk",
+      "sentiment": "negative",
+      "headline": "AMD hit by regulatory concerns and policy uncertainty",
+      "shock_return": -0.013851806334690133,
       "macro_context": null,
       "regime": "bull"
     }
