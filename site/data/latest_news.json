@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-13 15:00:00",
+  "timestamp": "2026-04-14 10:00:00",
   "items": [
     {
       "timestamp": "2026-02-02 16:00:00",
@@ -574,6 +574,18 @@
       "sentiment": "positive",
       "headline": "CVX rockets amid retail-driven momentum",
       "shock_return": 0.021406614570782124,
+      "macro_context": null,
+      "regime": "bear"
+    },
+    {
+      "timestamp": "2026-04-14 10:00:00",
+      "date": "2026-04-14",
+      "ticker": "RBLX",
+      "company_name": "Roblox Corporation",
+      "event_type": "meme_crash",
+      "sentiment": "negative",
+      "headline": "RBLX plunges as speculative interest evaporates",
+      "shock_return": -0.04368459476355502,
       "macro_context": null,
       "regime": "bear"
     }
