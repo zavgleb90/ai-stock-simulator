@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-04-29 12:00:00",
+  "timestamp": "2026-04-30 12:00:00",
   "items": [
-    {
-      "timestamp": "2026-02-12 12:00:00",
-      "date": "2026-02-12",
-      "ticker": "SPYG",
-      "company_name": "State Street SPDR Portfolio S&P 500 Growth ETF",
-      "event_type": "earnings_beat",
-      "sentiment": "positive",
-      "headline": "SPYG surges after earnings beat and upbeat guidance",
-      "shock_return": 0.014248062401691157,
-      "macro_context": null,
-      "regime": "bull"
-    },
     {
       "timestamp": "2026-02-13 13:00:00",
       "date": "2026-02-13",
@@ -599,6 +587,18 @@
       "headline": "NIO surges after earnings beat and upbeat guidance",
       "shock_return": 0.01420644730237625,
       "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-04-30 12:00:00",
+      "date": "2026-04-30",
+      "ticker": "LCID",
+      "company_name": "Lucid Group, Inc.",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "Analyst downgrades LCID citing slowing growth",
+      "shock_return": -0.013479768705345513,
+      "macro_context": "Inflation cools",
       "regime": "sideways"
     }
   ]
