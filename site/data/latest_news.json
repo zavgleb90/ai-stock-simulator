@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-04-30 12:00:00",
+  "timestamp": "2026-05-04 14:00:00",
   "items": [
-    {
-      "timestamp": "2026-02-13 13:00:00",
-      "date": "2026-02-13",
-      "ticker": "DIS",
-      "company_name": "The Walt Disney Company",
-      "event_type": "macro_headwind",
-      "sentiment": "negative",
-      "headline": "DIS slips as investors turn cautious on growth",
-      "shock_return": -0.003978480317455008,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-02-16 14:00:00",
       "date": "2026-02-16",
@@ -599,6 +587,18 @@
       "headline": "Analyst downgrades LCID citing slowing growth",
       "shock_return": -0.013479768705345513,
       "macro_context": "Inflation cools",
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-05-04 14:00:00",
+      "date": "2026-05-04",
+      "ticker": "ROKU",
+      "company_name": "Roku, Inc.",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "ROKU falls after downgrade and target cut",
+      "shock_return": -0.008972386046269602,
+      "macro_context": null,
       "regime": "sideways"
     }
   ]
