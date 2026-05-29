@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-05-04 14:00:00",
+  "timestamp": "2026-05-05 11:00:00",
   "items": [
-    {
-      "timestamp": "2026-02-16 14:00:00",
-      "date": "2026-02-16",
-      "ticker": "ROKU",
-      "company_name": "Roku, Inc.",
-      "event_type": "macro_headwind",
-      "sentiment": "negative",
-      "headline": "Macro worries weigh on stocks; ROKU under pressure",
-      "shock_return": -0.004171409741289401,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-02-16 15:00:00",
       "date": "2026-02-16",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "ROKU falls after downgrade and target cut",
       "shock_return": -0.008972386046269602,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-05-05 11:00:00",
+      "date": "2026-05-05",
+      "ticker": "HCA",
+      "company_name": "HCA Healthcare, Inc.",
+      "event_type": "regulatory_risk",
+      "sentiment": "negative",
+      "headline": "HCA hit by regulatory concerns and policy uncertainty",
+      "shock_return": -0.009192993250503455,
       "macro_context": null,
       "regime": "sideways"
     }
