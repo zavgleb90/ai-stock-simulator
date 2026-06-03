@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-05-05 11:00:00",
+  "timestamp": "2026-05-05 16:00:00",
   "items": [
-    {
-      "timestamp": "2026-02-16 15:00:00",
-      "date": "2026-02-16",
-      "ticker": "CSCO",
-      "company_name": "Cisco Systems, Inc.",
-      "event_type": "meme_spike",
-      "sentiment": "positive",
-      "headline": "CSCO spikes as social chatter surges",
-      "shock_return": 0.014945971486903062,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-02-16 16:00:00",
       "date": "2026-02-16",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "HCA hit by regulatory concerns and policy uncertainty",
       "shock_return": -0.009192993250503455,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-05-05 16:00:00",
+      "date": "2026-05-05",
+      "ticker": "SOFI",
+      "company_name": "SoFi Technologies, Inc.",
+      "event_type": "macro_headwind",
+      "sentiment": "negative",
+      "headline": "SOFI slips as investors turn cautious on growth",
+      "shock_return": -0.002244800451816222,
       "macro_context": null,
       "regime": "sideways"
     }
