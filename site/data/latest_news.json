@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-05-05 16:00:00",
+  "timestamp": "2026-05-06 10:00:00",
   "items": [
-    {
-      "timestamp": "2026-02-16 16:00:00",
-      "date": "2026-02-16",
-      "ticker": "BILI",
-      "company_name": "Bilibili Inc.",
-      "event_type": "regulatory_risk",
-      "sentiment": "negative",
-      "headline": "BILI weakens amid new regulatory scrutiny",
-      "shock_return": -0.005991920851539349,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-02-19 11:00:00",
       "date": "2026-02-19",
@@ -600,6 +588,18 @@
       "shock_return": -0.002244800451816222,
       "macro_context": null,
       "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-05-06 10:00:00",
+      "date": "2026-05-06",
+      "ticker": "BIDU",
+      "company_name": "Baidu, Inc.",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "Analyst downgrades BIDU citing slowing growth",
+      "shock_return": -0.014292082793638259,
+      "macro_context": null,
+      "regime": "bear"
     }
   ]
 }
