@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-05-13 12:00:00",
+  "timestamp": "2026-05-14 13:00:00",
   "items": [
-    {
-      "timestamp": "2026-03-02 10:00:00",
-      "date": "2026-03-02",
-      "ticker": "WFC",
-      "company_name": "Wells Fargo & Company",
-      "event_type": "meme_spike",
-      "sentiment": "positive",
-      "headline": "WFC rockets amid retail-driven momentum",
-      "shock_return": 0.015946530156756924,
-      "macro_context": null,
-      "regime": "bull"
-    },
     {
       "timestamp": "2026-03-02 12:00:00",
       "date": "2026-03-02",
@@ -599,6 +587,18 @@
       "headline": "Analyst upgrades PEP; shares climb on valuation call",
       "shock_return": 0.011776755998436469,
       "macro_context": "Geopolitical tension",
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-05-14 13:00:00",
+      "date": "2026-05-14",
+      "ticker": "F",
+      "company_name": "Ford Motor Company",
+      "event_type": "earnings_miss",
+      "sentiment": "negative",
+      "headline": "F slides after earnings miss; guidance disappoints",
+      "shock_return": -0.011425187294105507,
+      "macro_context": null,
       "regime": "sideways"
     }
   ]
