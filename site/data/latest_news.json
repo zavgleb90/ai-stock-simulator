@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-05-21 14:00:00",
+  "timestamp": "2026-05-22 10:00:00",
   "items": [
-    {
-      "timestamp": "2026-03-06 16:00:00",
-      "date": "2026-03-06",
-      "ticker": "SPY",
-      "company_name": "SPDR S&P 500 ETF Trust",
-      "event_type": "lawsuit",
-      "sentiment": "negative",
-      "headline": "SPY pressured after lawsuit headlines emerge",
-      "shock_return": -0.014362716254630118,
-      "macro_context": null,
-      "regime": "bull"
-    },
     {
       "timestamp": "2026-03-09 14:00:00",
       "date": "2026-03-09",
@@ -600,6 +588,18 @@
       "shock_return": 0.019543804276406652,
       "macro_context": null,
       "regime": "bull"
+    },
+    {
+      "timestamp": "2026-05-22 10:00:00",
+      "date": "2026-05-22",
+      "ticker": "CCL",
+      "company_name": "Carnival Corporation & plc",
+      "event_type": "earnings_miss",
+      "sentiment": "negative",
+      "headline": "CCL drops as margins compress and outlook weakens",
+      "shock_return": -0.027245243400347296,
+      "macro_context": null,
+      "regime": "sideways"
     }
   ]
 }
