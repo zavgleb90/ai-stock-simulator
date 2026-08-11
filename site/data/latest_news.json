@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-01 12:00:00",
+  "timestamp": "2026-06-02 12:00:00",
   "items": [
-    {
-      "timestamp": "2026-03-25 13:00:00",
-      "date": "2026-03-25",
-      "ticker": "PYPL",
-      "company_name": "PayPal Holdings, Inc.",
-      "event_type": "upgrade",
-      "sentiment": "positive",
-      "headline": "Analyst upgrades PYPL; shares climb on valuation call",
-      "shock_return": 0.0053698939637220585,
-      "macro_context": null,
-      "regime": "bear"
-    },
     {
       "timestamp": "2026-03-26 16:00:00",
       "date": "2026-03-26",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "BILI weakens amid new regulatory scrutiny",
       "shock_return": -0.005703025291089622,
+      "macro_context": null,
+      "regime": "bull"
+    },
+    {
+      "timestamp": "2026-06-02 12:00:00",
+      "date": "2026-06-02",
+      "ticker": "ATVI",
+      "company_name": "Activision Blizzard, Inc.",
+      "event_type": "macro_headwind",
+      "sentiment": "negative",
+      "headline": "Macro worries weigh on stocks; ATVI under pressure",
+      "shock_return": -0.005574861164497438,
       "macro_context": null,
       "regime": "bull"
     }
