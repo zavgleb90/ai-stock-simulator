@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-02 12:00:00",
+  "timestamp": "2026-06-05 11:00:00",
   "items": [
-    {
-      "timestamp": "2026-03-26 16:00:00",
-      "date": "2026-03-26",
-      "ticker": "V",
-      "company_name": "Visa Inc.",
-      "event_type": "lawsuit",
-      "sentiment": "negative",
-      "headline": "V pressured after lawsuit headlines emerge",
-      "shock_return": -0.012901400599011407,
-      "macro_context": null,
-      "regime": "bear"
-    },
     {
       "timestamp": "2026-03-30 10:00:00",
       "date": "2026-03-30",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "Macro worries weigh on stocks; ATVI under pressure",
       "shock_return": -0.005574861164497438,
+      "macro_context": null,
+      "regime": "bull"
+    },
+    {
+      "timestamp": "2026-06-05 11:00:00",
+      "date": "2026-06-05",
+      "ticker": "SPY",
+      "company_name": "SPDR S&P 500 ETF Trust",
+      "event_type": "earnings_miss",
+      "sentiment": "negative",
+      "headline": "SPY slides after earnings miss; guidance disappoints",
+      "shock_return": -0.027988681769156556,
       "macro_context": null,
       "regime": "bull"
     }
