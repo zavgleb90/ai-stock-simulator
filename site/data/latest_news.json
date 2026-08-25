@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-16 11:00:00",
+  "timestamp": "2026-06-16 13:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-03 15:00:00",
-      "date": "2026-04-03",
-      "ticker": "ZM",
-      "company_name": "Zoom Communications, Inc.",
-      "event_type": "product_launch",
-      "sentiment": "positive",
-      "headline": "ZM jumps on new product launch buzz",
-      "shock_return": 0.009391164859767456,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-04-06 14:00:00",
       "date": "2026-04-06",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "Analyst downgrades V citing slowing growth",
       "shock_return": -0.011437199487730417,
+      "macro_context": "Rates repriced",
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-16 13:00:00",
+      "date": "2026-06-16",
+      "ticker": "V",
+      "company_name": "Visa Inc.",
+      "event_type": "earnings_beat",
+      "sentiment": "positive",
+      "headline": "V surges after earnings beat and upbeat guidance",
+      "shock_return": 0.015762674266819904,
       "macro_context": "Rates repriced",
       "regime": "sideways"
     }
