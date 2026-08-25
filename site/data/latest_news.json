@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-12 14:00:00",
+  "timestamp": "2026-06-16 11:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-03 15:00:00",
-      "date": "2026-04-03",
-      "ticker": "COIN",
-      "company_name": "Coinbase Global, Inc.",
-      "event_type": "regulatory_risk",
-      "sentiment": "negative",
-      "headline": "COIN hit by regulatory concerns and policy uncertainty",
-      "shock_return": -0.019607569663441498,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-04-03 15:00:00",
       "date": "2026-04-03",
@@ -600,6 +588,18 @@
       "shock_return": 0.008226266211428846,
       "macro_context": null,
       "regime": "bear"
+    },
+    {
+      "timestamp": "2026-06-16 11:00:00",
+      "date": "2026-06-16",
+      "ticker": "V",
+      "company_name": "Visa Inc.",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "Analyst downgrades V citing slowing growth",
+      "shock_return": -0.011437199487730417,
+      "macro_context": "Rates repriced",
+      "regime": "sideways"
     }
   ]
 }
