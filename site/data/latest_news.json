@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-16 13:00:00",
+  "timestamp": "2026-06-16 15:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-06 14:00:00",
-      "date": "2026-04-06",
-      "ticker": "ROKU",
-      "company_name": "Roku, Inc.",
-      "event_type": "regulatory_risk",
-      "sentiment": "negative",
-      "headline": "ROKU weakens amid new regulatory scrutiny",
-      "shock_return": -0.018759217924063525,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-04-06 14:00:00",
       "date": "2026-04-06",
@@ -598,6 +586,18 @@
       "sentiment": "positive",
       "headline": "V surges after earnings beat and upbeat guidance",
       "shock_return": 0.015762674266819904,
+      "macro_context": "Rates repriced",
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-16 15:00:00",
+      "date": "2026-06-16",
+      "ticker": "WBA",
+      "company_name": "Walgreens Boots Alliance, Inc.",
+      "event_type": "macro_headwind",
+      "sentiment": "negative",
+      "headline": "Macro worries weigh on stocks; WBA under pressure",
+      "shock_return": -0.004229201197241931,
       "macro_context": "Rates repriced",
       "regime": "sideways"
     }
