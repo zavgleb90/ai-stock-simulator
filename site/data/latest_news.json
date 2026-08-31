@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-16 15:00:00",
+  "timestamp": "2026-06-17 11:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-06 14:00:00",
-      "date": "2026-04-06",
-      "ticker": "BILI",
-      "company_name": "Bilibili Inc.",
-      "event_type": "meme_crash",
-      "sentiment": "negative",
-      "headline": "BILI tumbles as meme momentum reverses",
-      "shock_return": -0.024846247164192085,
-      "macro_context": null,
-      "regime": "sideways"
-    },
     {
       "timestamp": "2026-04-07 12:00:00",
       "date": "2026-04-07",
@@ -599,6 +587,18 @@
       "headline": "Macro worries weigh on stocks; WBA under pressure",
       "shock_return": -0.004229201197241931,
       "macro_context": "Rates repriced",
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-17 11:00:00",
+      "date": "2026-06-17",
+      "ticker": "V",
+      "company_name": "Visa Inc.",
+      "event_type": "lawsuit",
+      "sentiment": "negative",
+      "headline": "V pressured after lawsuit headlines emerge",
+      "shock_return": -0.009549605692093358,
+      "macro_context": null,
       "regime": "sideways"
     }
   ]
