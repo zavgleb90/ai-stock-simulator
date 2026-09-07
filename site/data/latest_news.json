@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-17 11:00:00",
+  "timestamp": "2026-06-18 13:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-07 12:00:00",
-      "date": "2026-04-07",
-      "ticker": "TLRY",
-      "company_name": "Tilray Brands, Inc.",
-      "event_type": "macro_tailwind",
-      "sentiment": "positive",
-      "headline": "Risk-on session lifts TLRY alongside broader market",
-      "shock_return": 0.0042127897785636925,
-      "macro_context": null,
-      "regime": "bull"
-    },
     {
       "timestamp": "2026-04-07 14:00:00",
       "date": "2026-04-07",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "V pressured after lawsuit headlines emerge",
       "shock_return": -0.009549605692093358,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-18 13:00:00",
+      "date": "2026-06-18",
+      "ticker": "MRO",
+      "company_name": "Marathon Oil Corporation",
+      "event_type": "upgrade",
+      "sentiment": "positive",
+      "headline": "MRO rises after major broker issues upgrade",
+      "shock_return": 0.014269551306555333,
       "macro_context": null,
       "regime": "sideways"
     }
