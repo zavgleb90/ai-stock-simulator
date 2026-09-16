@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-18 16:00:00",
+  "timestamp": "2026-06-22 11:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-13 15:00:00",
-      "date": "2026-04-13",
-      "ticker": "CVX",
-      "company_name": "Chevron Corporation",
-      "event_type": "meme_spike",
-      "sentiment": "positive",
-      "headline": "CVX rockets amid retail-driven momentum",
-      "shock_return": 0.021406614570782124,
-      "macro_context": null,
-      "regime": "bear"
-    },
     {
       "timestamp": "2026-04-14 10:00:00",
       "date": "2026-04-14",
@@ -598,6 +586,18 @@
       "sentiment": "positive",
       "headline": "LCID rallies as quarterly results top expectations",
       "shock_return": 0.029299133143458767,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-22 11:00:00",
+      "date": "2026-06-22",
+      "ticker": "WFC",
+      "company_name": "Wells Fargo & Company",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "Analyst downgrades WFC citing slowing growth",
+      "shock_return": -0.009327732491583805,
       "macro_context": null,
       "regime": "sideways"
     }
