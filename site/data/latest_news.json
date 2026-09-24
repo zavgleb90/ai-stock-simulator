@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-22 11:00:00",
+  "timestamp": "2026-06-23 11:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-14 10:00:00",
-      "date": "2026-04-14",
-      "ticker": "RBLX",
-      "company_name": "Roblox Corporation",
-      "event_type": "meme_crash",
-      "sentiment": "negative",
-      "headline": "RBLX plunges as speculative interest evaporates",
-      "shock_return": -0.04368459476355502,
-      "macro_context": null,
-      "regime": "bear"
-    },
     {
       "timestamp": "2026-04-14 16:00:00",
       "date": "2026-04-14",
@@ -598,6 +586,18 @@
       "sentiment": "negative",
       "headline": "Analyst downgrades WFC citing slowing growth",
       "shock_return": -0.009327732491583805,
+      "macro_context": null,
+      "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-23 11:00:00",
+      "date": "2026-06-23",
+      "ticker": "CVX",
+      "company_name": "Chevron Corporation",
+      "event_type": "downgrade",
+      "sentiment": "negative",
+      "headline": "Analyst downgrades CVX citing slowing growth",
+      "shock_return": -0.005867458257016296,
       "macro_context": null,
       "regime": "sideways"
     }
