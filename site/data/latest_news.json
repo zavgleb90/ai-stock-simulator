@@ -1,18 +1,6 @@
 {
-  "timestamp": "2026-06-23 11:00:00",
+  "timestamp": "2026-06-25 15:00:00",
   "items": [
-    {
-      "timestamp": "2026-04-14 16:00:00",
-      "date": "2026-04-14",
-      "ticker": "SIRI",
-      "company_name": "Sirius XM Holdings Inc.",
-      "event_type": "meme_spike",
-      "sentiment": "positive",
-      "headline": "SIRI spikes as social chatter surges",
-      "shock_return": 0.013399637291802016,
-      "macro_context": null,
-      "regime": "bear"
-    },
     {
       "timestamp": "2026-04-22 14:00:00",
       "date": "2026-04-22",
@@ -600,6 +588,18 @@
       "shock_return": -0.005867458257016296,
       "macro_context": null,
       "regime": "sideways"
+    },
+    {
+      "timestamp": "2026-06-25 15:00:00",
+      "date": "2026-06-25",
+      "ticker": "MSFT",
+      "company_name": "Microsoft Corporation",
+      "event_type": "upgrade",
+      "sentiment": "positive",
+      "headline": "MSFT rises after major broker issues upgrade",
+      "shock_return": 0.00868949431909163,
+      "macro_context": null,
+      "regime": "bull"
     }
   ]
 }
